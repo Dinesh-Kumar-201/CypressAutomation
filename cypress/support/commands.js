@@ -25,3 +25,34 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
 /// <reference types="Cypress" />
+
+import 'cypress-file-upload';
+
+//creating a new custom command for text click
+Cypress.Commands.add('clickText', (text) => {
+
+    cy.get('a').contains(text).click()
+
+})
+
+//Overwriting the contains command --- this is failing, not working
+/*Cypress.Commands.overwriteQuery('contains',(originalFn, subject, filter, text, options = {}) => {
+
+    if(typeof text === 'object') {
+        options = text
+        text = filter
+        filter = undefined
+    }
+
+    options.matchCase = false
+
+    return originalFn(subject, filter, text, options)
+})*/
+
+//Custom command for login
+Cypress.Commands.add('login', (username,password) => {
+    
+    cy.get('#Email').type(username)
+
+    cy.get('#Password').type(password+'{enter}')
+})

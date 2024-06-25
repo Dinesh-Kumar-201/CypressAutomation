@@ -1,0 +1,32 @@
+[
+    {
+        "username": "Admin",
+        "password": "admin123",
+        "expected": "Dashboard"
+    },
+    {
+        "username": "xdrf",
+        "password": "admin123",
+        "expected": "Invalid credentials"
+    },
+    {
+        "username": "Admin",
+        "password": "56rgh7",
+        "expected": "Invalid credentials"
+    },
+    {
+        "username": "",
+        "password": "56rgh7",
+        "expected": "Required"
+    },
+    {
+        "username": "Admin",
+        "password": "",
+        "expected": "Required"
+    },
+    {
+        "username": "",
+        "password": "",
+        "expected": "Required"
+    } 
+]

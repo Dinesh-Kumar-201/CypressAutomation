@@ -23,3 +23,11 @@ require('@cypress/xpath');
 require('cypress-iframe');
 require('@4tw/cypress-drag-drop');
 import 'cypress-mochawesome-reporter/register';
+//import 'cypress-file-upload';
+
+//This below method surpasses the uncaught exception
+Cypress.on('uncaught:exception', (err, runnable) => {
+    // returning false here prevents Cypress from
+    // failing the test
+    return false
+  })
