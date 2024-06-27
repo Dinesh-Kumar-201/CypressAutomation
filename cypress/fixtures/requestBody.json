@@ -1,0 +1,11 @@
+{
+    "firstname" : "Hands-on",
+    "lastname" : "Cypress API Testing",
+    "totalprice" : 1331,
+    "depositpaid" : true,
+    "bookingdates" : {
+        "checkin" : "2023-06-08",
+        "checkout" : "2023-06-12"
+    },
+    "additionalneeds" : "Breakfast"
+}
